@@ -46,6 +46,8 @@ jobs:
       - name: Build
         run: pnpm run build
         working-directory: movie-explorer
+        env:
+          VITE_TMDB_API_KEY: ${{ secrets.VITE_TMDB_API_KEY }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
